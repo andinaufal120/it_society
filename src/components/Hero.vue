@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="px-5 md:px-36 py-24 items-center">
+    <div class="px-5 md:px-36 lg:px-72 py-24 items-center">
         <div class="grid grid-cols-1 gap-8">
             <!-- Specialties Icons -->
             <div>
