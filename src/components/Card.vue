@@ -17,10 +17,10 @@ defineProps({
       <div class="p-8">
         <a
           href="#"
-          class="mt-1 block font-serif text-lg leading-tight font-medium text-black hover:underline"
+          class="mt-1 block text-lg leading-tight font-medium text-black hover:underline"
           ><h3>{{ content.title }}</h3></a
         >
-        <p class="mt-2 font-serif text-gray-500">{{ content.description }}</p>
+        <p class="mt-2 text-gray-500">{{ content.description }}</p>
       </div>
     </div>
   </div>
