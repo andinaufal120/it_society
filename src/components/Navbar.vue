@@ -12,7 +12,7 @@ const navLinks = [
 
 <template>
   <nav
-    class="flex flex-row items-center justify-between bg-[#FFCF99] px-5 py-4"
+    class="fixed top-0 right-0 left-0 z-50 flex w-full flex-row items-center justify-between bg-[#FFCF99] px-5 py-4 shadow-sm"
   >
     <div>
       <a href="/"
