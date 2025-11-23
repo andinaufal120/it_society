@@ -12,7 +12,7 @@ import SpecialtiesIcons from "@/assets/specialties_icons.svg";
 
       <!-- Hero Text -->
       <div class="grid grid-cols-1 gap-8">
-        <h1 class="text-4xl font-bold text-black">
+        <h1>
           Driven by <span class="text-[#C61212]">curiosity</span>,<br />
           connected by technology.
         </h1>
