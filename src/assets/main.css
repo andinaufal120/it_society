@@ -7,3 +7,7 @@ h1 {
 h2 {
   @apply text-3xl font-semibold;
 }
+
+.navbar-link {
+  @apply transform rounded-md p-2 transition hover:bg-[#C61212] hover:text-white;
+}
