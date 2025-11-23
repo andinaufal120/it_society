@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-    content: Object,
+  content: Object,
 });
 </script>
 
@@ -11,10 +11,15 @@ defineProps({
         <img
           class="h-48 w-full object-cover md:h-full md:w-48"
           :src="`/src/assets/${content.thumbnail}`"
-          :alt="content.thumbnailAlt" />
+          :alt="content.thumbnailAlt"
+        />
       </div>
       <div class="p-8">
-        <a href="#" class="mt-1 block font-serif text-lg leading-tight font-medium text-black hover:underline"><h3>{{ content.title }}</h3></a>
+        <a
+          href="#"
+          class="mt-1 block font-serif text-lg leading-tight font-medium text-black hover:underline"
+          ><h3>{{ content.title }}</h3></a
+        >
         <p class="mt-2 font-serif text-gray-500">{{ content.description }}</p>
       </div>
     </div>
