@@ -11,12 +11,14 @@
       Discover your strengths and grow with peers who share the same passion for
       technology.
     </p>
-    <a href="/join">
-      <button
-        class="transform rounded-lg bg-black px-4 py-2 font-bold text-white transition hover:cursor-pointer hover:bg-white hover:text-black hover:shadow-lg hover:shadow-black/5"
-      >
-        Join now
-      </button>
-    </a>
+    <div>
+      <a href="/join">
+        <button
+          class="transform rounded-lg bg-black px-4 py-2 font-bold text-white transition hover:cursor-pointer hover:bg-white hover:text-black hover:shadow-lg hover:shadow-black/5"
+        >
+          Join now
+        </button>
+      </a>
+    </div>
   </div>
 </template>
