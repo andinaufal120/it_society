@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import socials from "@/assets/data/socials.js";
+</script>
 
 <template>
   <div class="flex flex-col gap-4 bg-[#111D4A] p-8 text-lg text-white">
@@ -24,15 +26,16 @@
         </div>
         <div>
           <ul class="flex flex-row gap-8">
-            <li>
+            <li v-for="social in socials" :key="social.title" class="list-none">
               <a
                 class="hover:opacity-80"
-                href="https://www.instagram.com/it_xsociety"
+                :href="social.link"
                 target="_blank"
                 rel="noopener noreferrer"
                 ><img
-                  src="@/assets/Instagram_Glyph_White.svg"
-                  alt="Open IT Society Instagram account in new tab"
+                  :src="`/src/assets/${social.thumbnail}`"
+                  :alt="social.thumbnailAlt"
+                  :title="social.title"
                   width="25"
               /></a>
             </li>
@@ -62,7 +65,7 @@
       <a href="https://yamaym.me" target="_blank" rel="noopener noreferrer">
         <span
           class="text-2xl"
-          style="font-family: 'JetBrains Mono', monospace"
+          style="font-family: &quot;JetBrains Mono&quot;, monospace"
           >yamaym.me
         </span>
       </a>
