@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  @apply text-4xl font-bold font-['bodoni-moda'] text-black;
+  @apply font-['bodoni-moda'] text-4xl font-bold text-black;
 }
 
 h2 {
@@ -23,9 +23,9 @@ h3 {
 }
 
 .navbar-link {
-  @apply transform rounded-md p-2 transition hover:bg-[#C61212] hover:text-white;
+  @apply transform rounded-md p-2 transition hover:bg-[#C61212] hover:text-white hover:opacity-100;
 }
 
 li a {
-  @apply decoration-1 underline hover:opacity-80;
+  @apply underline decoration-1 hover:opacity-80;
 }
