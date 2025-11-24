@@ -65,7 +65,7 @@ import socials from "@/assets/data/socials.js";
       <a href="https://yamaym.me" target="_blank" rel="noopener noreferrer">
         <span class="font-jetbrains-mono text-2xl">yamaym.me</span>
       </a>
-      <ul class="flex flex-col gap-8 underline md:flex-row">
+      <ul class="flex flex-col gap-8 md:flex-row">
         <li>
           <a
             class="flex flex-row gap-0.5"
