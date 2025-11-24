@@ -63,11 +63,7 @@ import socials from "@/assets/data/socials.js";
 
     <div class="flex flex-col gap-8 pt-4 md:flex-row md:items-center">
       <a href="https://yamaym.me" target="_blank" rel="noopener noreferrer">
-        <span
-          class="text-2xl"
-          style="font-family: &quot;JetBrains Mono&quot;, monospace"
-          >yamaym.me
-        </span>
+        <span class="font-jetbrains-mono text-2xl">yamaym.me</span>
       </a>
       <ul class="flex flex-col gap-8 underline md:flex-row">
         <li>
@@ -121,7 +117,3 @@ import socials from "@/assets/data/socials.js";
     </div>
   </div>
 </template>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-</style>
