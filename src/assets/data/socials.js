@@ -6,4 +6,11 @@ export default [
     thumbnailAlt: "Open Instagram in new tab.",
     link: "https://www.instagram.com/it_xsociety",
   },
+  {
+    title: "IT Society Email",
+    description: "",
+    thumbnail: "gmail.svg",
+    thumbnailAlt: "Mail to IT Society.",
+    link: "mailto:itsociety@example.com",
+  },
 ];
