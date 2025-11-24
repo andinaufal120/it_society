@@ -8,6 +8,14 @@ h2 {
   @apply text-3xl font-semibold;
 }
 
+h3 {
+  @apply text-2xl font-semibold;
+}
+
 .navbar-link {
   @apply transform rounded-md p-2 transition hover:bg-[#C61212] hover:text-white;
+}
+
+li a {
+  @apply decoration-1 hover:underline;
 }
