@@ -14,13 +14,18 @@ defineProps({
           :alt="content.thumbnailAlt"
         />
       </div>
-      <div class="p-8">
-        <a
-          href="#"
-          class="mt-1 block text-lg leading-tight font-medium text-black hover:underline"
-          ><h3>{{ content.title }}</h3></a
-        >
-        <p class="mt-2 text-gray-500">{{ content.description }}</p>
+      <div class="flex flex-col gap-4 p-8">
+        <h3>{{ content.title }}</h3>
+        <p class="text-gray-500">{{ content.description }}</p>
+        <div>
+          <a :href="`${content.link}`"
+            ><button
+              class="mt-2 transform rounded-lg bg-black px-4 py-2 font-bold text-white transition hover:cursor-pointer hover:opacity-80 hover:shadow-lg hover:shadow-black/5"
+            >
+              Learn more →
+            </button></a
+          >
+        </div>
       </div>
     </div>
   </div>
