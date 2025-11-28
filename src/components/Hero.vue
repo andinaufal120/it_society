@@ -13,7 +13,7 @@ import SpecialtiesIcons from "@/assets/specialties_icons.svg";
       <!-- Hero Text -->
       <div class="grid grid-cols-1 gap-8">
         <h1>
-          Driven by <span class="text-[#C61212]">curiosity</span>,<br />
+          Driven by <span class="text-brick-ember">curiosity</span>,<br />
           connected by technology.
         </h1>
         <p>We help students develop beyond what is taught.</p>

@@ -4,6 +4,72 @@
 @theme {
   --font-inter: "Inter", sans-serif;
   --font-jetbrains-mono: "JetBrains Mono", monospace;
+
+  /* Color palette */
+  --color-space-indigo: #111D4A;
+  --color-space-indigo-50: #eaeefa;
+  --color-space-indigo-100: #d5dcf6;
+  --color-space-indigo-200: #acbaec;
+  --color-space-indigo-300: #8297e3;
+  --color-space-indigo-400: #5975d9;
+  --color-space-indigo-500: #2f52d0;
+  --color-space-indigo-600: #2642a6;
+  --color-space-indigo-700: #1c317d;
+  --color-space-indigo-800: #132153;
+  --color-space-indigo-900: #09102a;
+  --color-space-indigo-950: #070b1d;
+
+  --color-brick-ember: #C61212;
+  --color-brick-ember-50: #fde8e8;
+  --color-brick-ember-100: #fbd0d0;
+  --color-brick-ember-200: #f6a2a2;
+  --color-brick-ember-300: #f27373;
+  --color-brick-ember-400: #ee4444;
+  --color-brick-ember-500: #e91616;
+  --color-brick-ember-600: #bb1111;
+  --color-brick-ember-700: #8c0d0d;
+  --color-brick-ember-800: #5d0909;
+  --color-brick-ember-900: #2f0404;
+  --color-brick-ember-950: #210303;
+
+  --color-apricot-cream: #FFCF99;
+  --color-apricot-cream-50: #fff3e5;
+  --color-apricot-cream-100: #ffe7cc;
+  --color-apricot-cream-200: #ffcf99;
+  --color-apricot-cream-300: #ffb866;
+  --color-apricot-cream-400: #ffa033;
+  --color-apricot-cream-500: #ff8800;
+  --color-apricot-cream-600: #cc6d00;
+  --color-apricot-cream-700: #995200;
+  --color-apricot-cream-800: #663600;
+  --color-apricot-cream-900: #331b00;
+  --color-apricot-cream-950: #241300;
+
+  --color-floral-white: #FFF8F0;
+  --color-floral-white-50: #fff3e5;
+  --color-floral-white-100: #ffe7cc;
+  --color-floral-white-200: #ffcf99;
+  --color-floral-white-300: #ffb866;
+  --color-floral-white-400: #ffa033;
+  --color-floral-white-500: #ff8800;
+  --color-floral-white-600: #cc6d00;
+  --color-floral-white-700: #995200;
+  --color-floral-white-800: #663600;
+  --color-floral-white-900: #331b00;
+  --color-floral-white-950: #241300;
+
+  --color-sage-green: #60935D;
+  --color-sage-green-50: #f0f5ef;
+  --color-sage-green-100: #e0ebe0;
+  --color-sage-green-200: #c2d7c1;
+  --color-sage-green-300: #a3c3a2;
+  --color-sage-green-400: #85af83;
+  --color-sage-green-500: #669c63;
+  --color-sage-green-600: #527c50;
+  --color-sage-green-700: #3d5d3c;
+  --color-sage-green-800: #293e28;
+  --color-sage-green-900: #141f14;
+  --color-sage-green-950: #0e160e;
 }
 
 body {
@@ -22,8 +88,12 @@ h3 {
   @apply text-2xl font-semibold;
 }
 
+.btn-primary {
+  @apply transform rounded-lg bg-black px-4 py-2 font-bold text-white transition hover:cursor-pointer hover:bg-white hover:text-black hover:shadow-lg hover:shadow-black/5;
+}
+
 .navbar-link {
-  @apply transform rounded-md p-2 transition hover:bg-[#C61212] hover:text-white hover:opacity-100;
+  @apply transform rounded-md p-2 transition hover:bg-brick-ember hover:text-white hover:opacity-100;
 }
 
 li a {

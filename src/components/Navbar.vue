@@ -12,7 +12,7 @@ const navLinks = [
 
 <template>
   <nav
-    class="fixed top-0 right-0 left-0 z-50 flex w-full flex-row items-center justify-between bg-[#FFCF99] px-5 py-4 shadow-sm"
+    class="fixed top-0 right-0 left-0 z-50 flex w-full flex-row items-center justify-between bg-apricot-cream px-5 py-4 shadow-sm"
   >
     <div>
       <a href="/"
@@ -56,7 +56,7 @@ const navLinks = [
       <svg
         v-if="!isOpen"
         xmlns="http://www.w3.org/2000/svg"
-        class="h-10 w-10 rounded-4xl p-2 text-black transition hover:bg-neutral-300 hover:text-[#C61212]"
+        class="h-10 w-10 rounded-4xl p-2 text-black transition hover:bg-neutral-300 hover:text-brick-ember"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -73,7 +73,7 @@ const navLinks = [
       <svg
         v-else
         xmlns="http://www.w3.org/2000/svg"
-        class="h-10 w-10 rounded-4xl p-2 text-black transition hover:bg-neutral-300 hover:text-[#C61212]"
+        class="h-10 w-10 rounded-4xl p-2 text-black transition hover:bg-neutral-300 hover:text-brick-ember"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -88,7 +88,7 @@ const navLinks = [
     </button>
 
     <!-- Mobile nav (vertical) -->
-    <div v-if="isOpen" class="w-full bg-[#FFCF99] px-6 py-4 md:hidden">
+    <div v-if="isOpen" class="w-full bg-apricot-cream px-6 py-4 md:hidden">
       <ul class="flex flex-col gap-4 font-medium text-black" role="list">
         <li v-for="link in navLinks" :key="link.href">
           <a class="navbar-link" :href="link.href">{{ link.name }}</a>
