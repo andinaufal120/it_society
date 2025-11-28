@@ -3,7 +3,7 @@ import socials from "@/assets/data/socials.js";
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 bg-space-indigo p-8 text-lg text-white">
+  <div class="bg-space-indigo flex flex-col gap-4 p-8 text-lg text-white">
     <div class="py-10">
       <img src="@/assets/specialties_footer.svg" alt="" width="550" />
     </div>

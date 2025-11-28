@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="overflow-hidden rounded-xl bg-white shadow-md">
+  <div class="card-thumbnail">
     <div class="md:flex">
       <div class="md:shrink-0">
         <img
@@ -19,11 +19,7 @@ defineProps({
         <p class="text-gray-500">{{ content.description }}</p>
         <div>
           <a :href="`${content.link}`"
-            ><button
-              class="mt-2 transform rounded-lg bg-black px-4 py-2 font-bold text-white transition hover:cursor-pointer hover:opacity-80 hover:shadow-lg hover:shadow-black/5"
-            >
-              Learn more →
-            </button></a
+            ><button class="btn-primary">Learn more →</button></a
           >
         </div>
       </div>
