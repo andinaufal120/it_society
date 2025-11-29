@@ -103,6 +103,14 @@
 }
 
 @layer components {
+  .section-wrapper {
+    @apply px-5 py-24 md:px-36 lg:px-72;
+  }
+
+  .section-header {
+    @apply mb-8 flex flex-col gap-4;
+  }
+
   .btn-primary {
     @apply transform rounded-lg bg-black px-4 py-2 font-bold text-white transition;
   }
