@@ -94,11 +94,11 @@
   }
 
   form input {
-    @apply rounded-md bg-white p-2 invalid:border-pink-500 not-placeholder-shown:invalid:text-pink-600 focus:border-sky-500 focus:outline focus:outline-sky-500 focus:invalid:border-pink-500 focus:invalid:outline-pink-500 disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500 disabled:shadow-none dark:disabled:border-gray-700 dark:disabled:bg-gray-800/20;
+    @apply flex-1 rounded-md p-2.5 invalid:ring-pink-500 not-placeholder-shown:invalid:text-pink-600 focus:ring-4 focus:ring-sky-500 focus:invalid:ring-pink-500 disabled:bg-gray-50 disabled:text-gray-500 disabled:shadow-none disabled:ring-gray-200 dark:disabled:bg-gray-800/20 dark:disabled:ring-gray-700;
   }
 
   form label {
-    @apply mt-4 block font-semibold text-white dark:text-white;
+    @apply block font-semibold text-white dark:text-white;
   }
 }
 
@@ -129,6 +129,10 @@
 
   .navbar-link {
     @apply hover:bg-brick-ember transform rounded-md p-2 transition hover:text-white hover:opacity-100;
+  }
+
+  .input-wrapper {
+    @apply flex flex-row rounded-md bg-white;
   }
 
   .input-invalid-err {
