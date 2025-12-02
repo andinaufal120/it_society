@@ -1,35 +1,153 @@
-@import './base.css';
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import "tailwindcss";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+
+  /* Color palette */
+  --color-space-indigo: #111d4a;
+  --color-space-indigo-50: #eaeefa;
+  --color-space-indigo-100: #d5dcf6;
+  --color-space-indigo-200: #acbaec;
+  --color-space-indigo-300: #8297e3;
+  --color-space-indigo-400: #5975d9;
+  --color-space-indigo-500: #2f52d0;
+  --color-space-indigo-600: #2642a6;
+  --color-space-indigo-700: #1c317d;
+  --color-space-indigo-800: #132153;
+  --color-space-indigo-900: #09102a;
+  --color-space-indigo-950: #070b1d;
+
+  --color-brick-ember: #c61212;
+  --color-brick-ember-50: #fde8e8;
+  --color-brick-ember-100: #fbd0d0;
+  --color-brick-ember-200: #f6a2a2;
+  --color-brick-ember-300: #f27373;
+  --color-brick-ember-400: #ee4444;
+  --color-brick-ember-500: #e91616;
+  --color-brick-ember-600: #bb1111;
+  --color-brick-ember-700: #8c0d0d;
+  --color-brick-ember-800: #5d0909;
+  --color-brick-ember-900: #2f0404;
+  --color-brick-ember-950: #210303;
+
+  --color-apricot-cream: #ffcf99;
+  --color-apricot-cream-50: #fff3e5;
+  --color-apricot-cream-100: #ffe7cc;
+  --color-apricot-cream-200: #ffcf99;
+  --color-apricot-cream-300: #ffb866;
+  --color-apricot-cream-400: #ffa033;
+  --color-apricot-cream-500: #ff8800;
+  --color-apricot-cream-600: #cc6d00;
+  --color-apricot-cream-700: #995200;
+  --color-apricot-cream-800: #663600;
+  --color-apricot-cream-900: #331b00;
+  --color-apricot-cream-950: #241300;
+
+  --color-floral-white: #fff8f0;
+  --color-floral-white-50: #fff3e5;
+  --color-floral-white-100: #ffe7cc;
+  --color-floral-white-200: #ffcf99;
+  --color-floral-white-300: #ffb866;
+  --color-floral-white-400: #ffa033;
+  --color-floral-white-500: #ff8800;
+  --color-floral-white-600: #cc6d00;
+  --color-floral-white-700: #995200;
+  --color-floral-white-800: #663600;
+  --color-floral-white-900: #331b00;
+  --color-floral-white-950: #241300;
+
+  --color-sage-green: #60935d;
+  --color-sage-green-50: #f0f5ef;
+  --color-sage-green-100: #e0ebe0;
+  --color-sage-green-200: #c2d7c1;
+  --color-sage-green-300: #a3c3a2;
+  --color-sage-green-400: #85af83;
+  --color-sage-green-500: #669c63;
+  --color-sage-green-600: #527c50;
+  --color-sage-green-700: #3d5d3c;
+  --color-sage-green-800: #293e28;
+  --color-sage-green-900: #141f14;
+  --color-sage-green-950: #0e160e;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
+@layer base {
   body {
-    display: flex;
-    place-items: center;
+    font-family: var(--font-inter);
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  h1 {
+    @apply font-['bodoni-moda'] text-4xl font-bold text-black;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  li a {
+    @apply underline decoration-1 hover:opacity-80;
+  }
+
+  form input {
+    @apply flex-1 rounded-md p-2.5 invalid:ring-pink-500 not-placeholder-shown:invalid:text-pink-600 focus:ring-4 focus:ring-sky-500 focus:invalid:ring-pink-500 disabled:bg-gray-50 disabled:text-gray-500 disabled:shadow-none disabled:ring-gray-200 dark:disabled:bg-gray-800/20 dark:disabled:ring-gray-700;
+  }
+
+  form label {
+    @apply block font-semibold text-white dark:text-white;
+  }
+}
+
+@layer components {
+  .section-wrapper {
+    @apply px-5 py-24 md:px-36 lg:px-72;
+  }
+
+  .section-header {
+    @apply mb-8 flex flex-col gap-4;
+  }
+
+  .btn-primary {
+    @apply transform rounded-lg bg-black px-4 py-2 font-bold text-white transition;
+  }
+
+  .btn-primary:hover {
+    @apply cursor-pointer bg-white text-black shadow-lg shadow-black/5;
+  }
+
+  .primary-modal-btn {
+    @apply inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 sm:ml-3 sm:w-auto;
+  }
+
+  .secondary-modal-btn {
+    @apply mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto;
+  }
+
+  .danger-modal-btn {
+    @apply inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto;
+  }
+
+  .card-thumbnail {
+    @apply overflow-hidden rounded-xl bg-white shadow-md;
+  }
+
+  .card-thumbnail .btn-primary {
+    @apply mt-2 hover:bg-black hover:text-white hover:opacity-80;
+  }
+
+  .navbar-link {
+    @apply hover:bg-brick-ember transform rounded-md p-2 transition hover:text-white hover:opacity-100;
+  }
+
+  .input-wrapper {
+    @apply flex flex-row rounded-md bg-white;
+  }
+
+  .input-invalid-err {
+    @apply invisible text-sm text-pink-600 peer-not-placeholder-shown:peer-invalid:visible;
   }
 }
