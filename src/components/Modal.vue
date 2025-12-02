@@ -10,7 +10,7 @@
   >
     <div v-if="isOpen" class="relative z-10" @click="close">
       <!-- Backdrop -->
-      <div class="fixed inset-0 bg-space-indigo/50 transition-opacity"></div>
+      <div class="bg-space-indigo/50 fixed inset-0 transition-opacity"></div>
 
       <!-- Modal Container -->
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -28,7 +28,7 @@
             <div
               v-if="isOpen"
               @click.stop
-              class="relative transform overflow-hidden rounded-lg bg-floral-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+              class="bg-floral-white relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
             >
               <!-- Modal Content -->
               <div class="bg-floral-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
@@ -53,12 +53,12 @@
                   >
                     <h3
                       v-if="title"
-                      class="font-inter text-lg font-semibold text-space-indigo"
+                      class="font-inter text-space-indigo text-lg font-semibold"
                     >
                       {{ title }}
                     </h3>
                     <div class="mt-2">
-                      <slot class="text-sm text-space-indigo/70"></slot>
+                      <slot class="text-space-indigo/70 text-sm"></slot>
                     </div>
                   </div>
                 </div>

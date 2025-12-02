@@ -1,4 +1,7 @@
 <script setup>
+import { ref } from "vue";
+import Modal from "./Modal.vue";
+
 defineProps({
   formTitle: {
     type: String,
@@ -9,10 +12,30 @@ defineProps({
     default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
   },
 });
+
+const dataForm = ref({
+  firstName: "",
+  lastName: "",
+  email: "",
+  whatsappNumber: "",
+  discordUsername: "",
+});
+
+const isModalOpen = ref(false);
+
+const showConfirmModal = () => {
+  isModalOpen.value = true;
+};
+
+const confirmSubmission = () => {
+  isModalOpen.value = false;
+  // wait for transition
+  setTimeout(() => window.location.replace("/"), 300);
+};
 </script>
 
 <template>
-  <form action="#">
+  <form @submit.prevent="showConfirmModal">
     <div class="section-wrapper bg-space-indigo">
       <!-- Section header -->
       <div class="section-header text-white">
@@ -28,6 +51,7 @@ defineProps({
               <label for="first-name">First name:</label>
               <div class="input-wrapper">
                 <input
+                  v-model="dataForm.firstName"
                   type="text"
                   id="first-name"
                   name="first-name"
@@ -45,6 +69,7 @@ defineProps({
               </label>
               <div class="input-wrapper">
                 <input
+                  v-model="dataForm.lastName"
                   type="text"
                   id="last-name"
                   name="last-name"
@@ -52,9 +77,7 @@ defineProps({
                   class="peer"
                 />
               </div>
-              <p class="input-invalid-err">
-                Please provide a valid last name.
-              </p>
+              <p class="input-invalid-err">Please provide a valid last name.</p>
             </div>
           </div>
 
@@ -62,6 +85,7 @@ defineProps({
             <label for="email">Email:</label>
             <div class="input-wrapper">
               <input
+                v-model="dataForm.email"
                 type="email"
                 id="email"
                 name="email"
@@ -82,6 +106,7 @@ defineProps({
                 >+62</span
               >
               <input
+                v-model="dataForm.whatsappNumber"
                 type="tel"
                 id="whatsapp-number"
                 name="whatsapp-number"
@@ -98,7 +123,14 @@ defineProps({
           <div class="flex flex-col gap-2">
             <label for="discord-usn">Discord username:</label>
             <div class="input-wrapper">
-              <input type="text" id="discord-usn" name="discord-usn" placeholder="john25" required class="peer" />
+              <input
+                v-model="dataForm.discordUsername"
+                id="discord-usn"
+                name="discord-usn"
+                placeholder="john25"
+                required
+                class="peer"
+              />
             </div>
             <p class="input-invalid-err">
               Please provide a valid Discord username.
@@ -117,4 +149,38 @@ defineProps({
       </div>
     </div>
   </form>
+
+  <Modal
+    :is-open="isModalOpen"
+    title="Confirm Submission"
+    icon="warning"
+    @close="isModalOpen = false"
+  >
+    <p class="text-sm text-gray-500">Is this correct?</p>
+    <div class="text-sm text-gray-500">
+      <p>
+        <strong>Name:</strong> {{ dataForm.firstName }} {{ dataForm.lastName }}
+      </p>
+      <p><strong>Email:</strong> {{ dataForm.email }}</p>
+      <p><strong>WhatsApp Number:</strong> +62{{ dataForm.whatsappNumber }}</p>
+      <p><strong>Discord Username:</strong> {{ dataForm.discordUsername }}</p>
+    </div>
+
+    <template #footer>
+      <button
+        type="button"
+        class="primary-modal-btn"
+        @click="confirmSubmission"
+      >
+        Confirm
+      </button>
+      <button
+        type="button"
+        class="secondary-modal-btn"
+        @click="isModalOpen = false"
+      >
+        Cancel
+      </button>
+    </template>
+  </Modal>
 </template>
