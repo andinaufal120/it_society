@@ -3,7 +3,7 @@ export default [
     title: "IT Network System Administration",
     description:
       "You will learn the basics for networking and server administration to deploy network services to users.",
-    thumbnail: "system_monitoring.jpg",
+    thumbnail: new URL("../system_monitoring.jpg", import.meta.url),
     thumbnailAlt: "A screen showing system statistics.",
     link: "/specialties/itnsa",
   },
@@ -11,7 +11,7 @@ export default [
     title: "Cyber Security",
     description:
       "Learn why an attack can be made and how to protect our system from attackers.",
-    thumbnail: "cyber_security.jpg",
+    thumbnail: new URL("../cyber_security.jpg", import.meta.url),
     thumbnailAlt:
       "A system which the user tries to escalate privileges using sudo.",
     link: "/specialties/cybersec",
@@ -20,7 +20,7 @@ export default [
     title: "Cloud Computing",
     description:
       "You will learn how to deploy services that works together in a public cloud.",
-    thumbnail: "cloud.jpg",
+    thumbnail: new URL("../cloud.jpg", import.meta.url),
     thumbnailAlt: "Cloud in the sky - it's everywhere, like the internet.",
     link: "/specialties/cloud",
   },
@@ -28,7 +28,7 @@ export default [
     title: "Cabling",
     description:
       "The 1st layer - The Physical Layer. You will learn how to pull and terminate network cable including optical fibers properly.",
-    thumbnail: "cabling.jpg",
+    thumbnail: new URL("../cabling.jpg", import.meta.url),
     thumbnailAlt:
       "Optical fibers terminated and connected to Optical Line Terminal (OLT).",
     link: "/specialties/cabling",

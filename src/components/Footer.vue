@@ -33,7 +33,7 @@ import socials from "@/assets/data/socials.js";
                 target="_blank"
                 rel="noopener noreferrer"
                 ><img
-                  :src="`/src/assets/${social.thumbnail}`"
+                  :src="social.thumbnail"
                   :alt="social.thumbnailAlt"
                   :title="social.title"
                   width="25"
