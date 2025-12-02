@@ -10,7 +10,7 @@ defineProps({
       <div class="md:shrink-0">
         <img
           class="h-60 w-full object-cover md:h-full md:w-60"
-          :src="`/src/assets/${content.thumbnail}`"
+          :src="content.thumbnail"
           :alt="content.thumbnailAlt"
         />
       </div>
