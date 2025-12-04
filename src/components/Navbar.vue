@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 const isOpen = ref(false);
 
 const navLinks = [
@@ -12,17 +13,16 @@ const navLinks = [
 
 <template>
   <nav
-    class="bg-apricot-cream fixed top-0 right-0 left-0 z-50 flex w-full flex-row items-center justify-between px-5 py-4 shadow-sm"
+    class="bg-floral-white fixed top-0 right-0 left-0 z-50 flex w-full flex-row items-center justify-between px-8 py-5 md:px-24"
   >
     <div>
-      <a href="/"
-        ><img
-          class="min-h-[46px] min-w-[161px]"
+      <RouterLink to="/">
+        <img
+          class="min-w-32 md:min-w-36"
           src="@/assets/itsociety_wordmark.svg"
           alt="Wordmark"
-          width="161"
-          height="46"
-      /></a>
+        />
+      </RouterLink>
     </div>
 
     <div class="hidden flex-row items-center gap-8 md:flex">
@@ -30,14 +30,16 @@ const navLinks = [
       <div>
         <ul class="flex flex-row gap-6 font-medium text-black" role="list">
           <li v-for="link in navLinks" :key="link.href">
-            <a class="navbar-link" :href="link.href">{{ link.name }}</a>
+            <RouterLink class="navbar-link" :to="link.href">
+              {{ link.name }}
+            </RouterLink>
           </li>
         </ul>
       </div>
       <div>
-        <a href="#">
+        <RouterLink to="/join">
           <button class="btn-primary">Join Now</button>
-        </a>
+        </RouterLink>
       </div>
     </div>
 
@@ -84,17 +86,22 @@ const navLinks = [
     </button>
 
     <!-- Mobile nav (vertical) -->
-    <div v-if="isOpen" class="bg-apricot-cream w-full px-6 py-4 md:hidden">
+    <div
+      v-if="isOpen"
+      class="bg-apricot-cream w-full rounded-xl px-6 py-4 md:hidden"
+    >
       <ul class="flex flex-col gap-4 font-medium text-black" role="list">
         <li v-for="link in navLinks" :key="link.href">
-          <a class="navbar-link" :href="link.href">{{ link.name }}</a>
+          <RouterLink class="navbar-link" :to="link.href">{{
+            link.name
+          }}</RouterLink>
         </li>
       </ul>
 
       <div class="mt-4">
-        <a href="#">
+        <RouterLink to="/join">
           <button class="btn-primary">Join Now</button>
-        </a>
+        </RouterLink>
       </div>
     </div>
   </nav>
