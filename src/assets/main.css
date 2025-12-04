@@ -89,6 +89,10 @@
     @apply text-2xl font-semibold;
   }
 
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
   li a {
     @apply underline decoration-1 hover:opacity-80;
   }
@@ -149,5 +153,13 @@
 
   .input-invalid-err {
     @apply invisible text-sm text-pink-600 peer-not-placeholder-shown:peer-invalid:visible;
+  }
+
+  .card-content {
+    @apply flex flex-col gap-4 p-8;
+  }
+
+  .card-label {
+    @apply text-lg font-semibold;
   }
 }
