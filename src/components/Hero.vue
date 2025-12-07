@@ -1,5 +1,5 @@
 <script setup>
-import SpecialtiesIcons from "@/assets/specialties_icons.svg";
+import SpecialtiesIcons from "@/assets/images/icon/specialties_icons.svg";
 </script>
 
 <template>

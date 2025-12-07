@@ -5,8 +5,8 @@ const isOpen = ref(false);
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Courses", href: "/courses" },
   { name: "Blogs", href: "/blogs" },
+  { name: "Courses", href: "/courses" },
   { name: "About", href: "/about" },
 ];
 </script>

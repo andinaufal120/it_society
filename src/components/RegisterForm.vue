@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import Modal from "./Modal.vue";
+import router from "@/router";
 
 defineProps({
   formTitle: {
@@ -21,16 +22,34 @@ const dataForm = ref({
   discordUsername: "",
 });
 
-const isModalOpen = ref(false);
+const isConfirmModalOpen = ref(false);
+const isSuccessModalOpen = ref(false);
+const isSubmitting = ref(false);
 
 const showConfirmModal = () => {
-  isModalOpen.value = true;
+  isConfirmModalOpen.value = true;
 };
 
 const confirmSubmission = () => {
-  isModalOpen.value = false;
-  // wait for transition
-  setTimeout(() => window.location.replace("/"), 300);
+  isSubmitting.value = true;
+  isConfirmModalOpen.value = false;
+  isSuccessModalOpen.value = true;
+};
+
+const closeSuccessModal = () => {
+  isSuccessModalOpen.value = false;
+
+  // Reset form
+  dataForm.value = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    whatsappNumber: "",
+    discordUsername: "",
+  };
+
+  isSubmitting.value = false;
+  window.location.replace("/");
 };
 </script>
 
@@ -142,6 +161,7 @@ const confirmSubmission = () => {
           <button
             class="w-48 flex-initial transform self-center rounded-lg bg-black px-4 py-2 font-bold text-white transition hover:cursor-pointer hover:bg-white hover:text-black hover:shadow-lg hover:shadow-black/5"
             type="submit"
+            :disabled="isSubmitting"
           >
             Submit
           </button>
@@ -150,11 +170,12 @@ const confirmSubmission = () => {
     </div>
   </form>
 
+  <!-- Confirmation modal -->
   <Modal
-    :is-open="isModalOpen"
+    :is-open="isConfirmModalOpen"
     title="Confirm Submission"
     icon="warning"
-    @close="isModalOpen = false"
+    @close="isConfirmModalOpen = false"
   >
     <p class="text-sm text-gray-500">Is this correct?</p>
     <div class="text-sm text-gray-500">
@@ -171,15 +192,39 @@ const confirmSubmission = () => {
         type="button"
         class="primary-modal-btn"
         @click="confirmSubmission"
+        :disabled="isSubmitting"
       >
         Confirm
       </button>
       <button
         type="button"
         class="secondary-modal-btn"
-        @click="isModalOpen = false"
+        @click="isConfirmModalOpen = false"
+        :disabled="isSubmitting"
       >
         Cancel
+      </button>
+    </template>
+  </Modal>
+
+  <!-- Success modal -->
+  <Modal
+    :is-open="isSuccessModalOpen"
+    title="Submission Successful"
+    icon="success"
+    @close="closeSuccessModal"
+  >
+    <p class="text-sm text-gray-500">
+      Your registration has been successfully submitted.
+    </p>
+
+    <template #footer>
+      <button
+        type="button"
+        class="primary-modal-btn"
+        @click="closeSuccessModal"
+      >
+        OK
       </button>
     </template>
   </Modal>

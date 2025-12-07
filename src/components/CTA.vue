@@ -11,9 +11,9 @@
         for technology.
       </p>
       <div>
-        <a href="/join">
+        <RouterLink to="/join">
           <button class="btn-primary">Join now</button>
-        </a>
+        </RouterLink>
       </div>
     </div>
   </div>

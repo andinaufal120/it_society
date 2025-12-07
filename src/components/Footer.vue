@@ -7,7 +7,11 @@ import socials from "@/assets/data/socials.js";
     class="bg-space-indigo flex flex-col gap-4 p-8 text-lg text-white md:px-24 md:py-8"
   >
     <div class="py-10">
-      <img src="@/assets/specialties_footer.svg" alt="" width="550" />
+      <img
+        src="../assets/images/icon/specialties_footer.svg"
+        alt=""
+        width="550"
+      />
     </div>
 
     <div
@@ -55,10 +59,18 @@ import socials from "@/assets/data/socials.js";
       <div class="flex flex-col gap-2">
         <h3>Learn</h3>
         <ul>
-          <li><a href="#">IT Network System Administration</a></li>
-          <li><a href="#">Cyber security</a></li>
-          <li><a href="#">Cloud computing</a></li>
-          <li><a href="#">Cabling</a></li>
+          <li>
+            <RouterLink to="/courses/itnsa"
+              >IT Network System Administration</RouterLink
+            >
+          </li>
+          <li>
+            <RouterLink to="/courses/cybersec">Cyber security</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/courses/cloudcomp">Cloud computing</RouterLink>
+          </li>
+          <li><RouterLink to="/courses/cabling">Cabling</RouterLink></li>
         </ul>
       </div>
     </div>
@@ -76,7 +88,7 @@ import socials from "@/assets/data/socials.js";
             rel="noopener noreferrer"
             >Website Source
             <img
-              src="@/assets/open-in-new-tab.svg"
+              src="../assets/images/icon/open-in-new-tab.svg"
               alt="Open in new tab"
               width="15"
             />
@@ -90,7 +102,7 @@ import socials from "@/assets/data/socials.js";
             rel="noopener noreferrer"
             >Website Figma Design
             <img
-              src="@/assets/open-in-new-tab.svg"
+              src="../assets/images/icon/open-in-new-tab.svg"
               alt="Open in new tab"
               width="15"
             />
@@ -104,7 +116,7 @@ import socials from "@/assets/data/socials.js";
             rel="noopener noreferrer"
             >Dev's GitHub
             <img
-              src="@/assets/open-in-new-tab.svg"
+              src="../assets/images/icon/open-in-new-tab.svg"
               alt="Open in new tab"
               width="15"
             />
