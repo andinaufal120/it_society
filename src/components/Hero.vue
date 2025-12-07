@@ -1,5 +1,5 @@
 <script setup>
-import SpecialtiesIcons from "@/assets/specialties_icons.svg";
+import SpecialtiesIcons from "@/assets/images/icon/specialties_icons.svg";
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import SpecialtiesIcons from "@/assets/specialties_icons.svg";
           Driven by <span class="text-brick-ember">curiosity</span>,<br />
           connected by technology.
         </h1>
-        <p>We help students develop beyond what is taught.</p>
+        <p>We help students develop beyond what was taught.</p>
       </div>
     </div>
   </div>

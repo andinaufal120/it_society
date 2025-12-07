@@ -14,12 +14,12 @@ defineProps({
           :alt="content.thumbnailAlt"
         />
       </div>
-      <div class="flex flex-col gap-4 p-8">
+      <div class="card-content">
         <h3>{{ content.title }}</h3>
         <p class="text-gray-500">{{ content.description }}</p>
         <div>
-          <a :href="`${content.link}`"
-            ><button class="btn-primary">Learn more →</button></a
+          <RouterLink :to="content.link"
+            ><button class="btn-primary">Learn more →</button></RouterLink
           >
         </div>
       </div>
