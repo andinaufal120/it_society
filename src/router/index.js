@@ -8,6 +8,7 @@ import CablingPage from "@/views/courses/CablingPage.vue";
 import BlogPage from "@/views/BlogPage.vue";
 import BlogContentPage from "@/views/BlogContentPage.vue";
 import AboutPage from "@/views/AboutPage.vue";
+import AboutMePage from "@/views/AboutMePage.vue";
 import CoursesPage from "@/views/CoursesPage.vue";
 import NotFound from "@/views/NotFound.vue";
 
@@ -39,6 +40,12 @@ const routes = [
     name: "About",
     component: AboutPage,
     meta: { title: "About - IT Society" },
+  },
+  {
+    path: "/aboutme",
+    name: "About Me",
+    component: AboutMePage,
+    meta: { title: "About Me - IT Society" },
   },
   {
     path: "/blogs",

@@ -8,24 +8,25 @@ const navLinks = [
   { name: "Blogs", href: "/blogs" },
   { name: "Courses", href: "/courses" },
   { name: "About", href: "/about" },
+  { name: "About Me", href: "/aboutme" }
 ];
 </script>
 
 <template>
   <nav
-    class="bg-floral-white fixed top-0 right-0 left-0 z-50 flex w-full flex-row items-center justify-between px-8 py-5 md:px-24"
+    class="bg-floral-white fixed top-0 right-0 left-0 z-50 flex w-full flex-row items-center justify-between px-8 py-5 lg:px-24"
   >
     <div>
       <RouterLink to="/">
         <img
-          class="min-w-32 md:min-w-36"
+          class="min-w-32 lg:min-w-36"
           src="@/assets/itsociety_wordmark.svg"
           alt="Wordmark"
         />
       </RouterLink>
     </div>
 
-    <div class="hidden flex-row items-center gap-8 md:flex">
+    <div class="hidden flex-row items-center gap-8 lg:flex">
       <!-- Desktop links -->
       <div>
         <ul class="flex flex-row gap-6 font-medium text-black" role="list">
@@ -45,7 +46,7 @@ const navLinks = [
 
     <!-- Mobile hamburger -->
     <button
-      class="flex items-center md:hidden"
+      class="flex items-center lg:hidden"
       @click="isOpen = !isOpen"
       :aria-expanded="isOpen"
       aria-label="Toggle navigation"
@@ -88,7 +89,7 @@ const navLinks = [
     <!-- Mobile nav (vertical) -->
     <div
       v-if="isOpen"
-      class="bg-apricot-cream w-full rounded-xl px-6 py-4 md:hidden"
+      class="bg-apricot-cream w-full rounded-xl px-6 py-4 lg:hidden"
     >
       <ul class="flex flex-col gap-4 font-medium text-black" role="list">
         <li v-for="link in navLinks" :key="link.href">
