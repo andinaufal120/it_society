@@ -10,12 +10,12 @@ defineProps({
   <div class="section-wrapper grid grid-cols-1 gap-12 md:grid-cols-2">
     <div class="grid grid-cols-1 gap-8">
       <!-- Hero Text -->
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-8 text-center md:text-left">
         <h1>
           <!-- HTML injection from parent -->
           <slot name="heading"></slot>
         </h1>
-        <p class="text-center md:text-left">{{ subHeading }}</p>
+        <p class="">{{ subHeading }}</p>
       </div>
     </div>
     <div v-if="image" class="hidden md:flex justify-end">
