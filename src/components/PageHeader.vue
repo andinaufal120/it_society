@@ -15,7 +15,7 @@ defineProps({
           <!-- HTML injection from parent -->
           <slot name="heading"></slot>
         </h1>
-        <p>{{ subHeading }}</p>
+        <p class="text-center lg:text-left">{{ subHeading }}</p>
       </div>
     </div>
     <div v-if="image" class="hidden md:flex justify-end">
