@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full text-center shadow-lg md:w-72">
+  <div class="w-full text-center shadow-lg md:w-52 lg:w-72">
     <header
       :class="`flex flex-col items-center gap-2 bg-${content.cardColor} pt-4 pb-10`"
     >

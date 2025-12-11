@@ -18,7 +18,7 @@ defineProps({
         <p class="">{{ subHeading }}</p>
       </div>
     </div>
-    <div v-if="image" class="hidden md:flex justify-end">
+    <div v-if="image" class="hidden justify-end md:flex">
       <img
         class="md:h-lg w-sm rounded-3xl md:w-lg"
         :src="image"
