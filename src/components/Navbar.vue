@@ -8,7 +8,7 @@ const navLinks = [
   { name: "Blogs", href: "/blogs" },
   { name: "Courses", href: "/courses" },
   { name: "About", href: "/about" },
-  { name: "About Me", href: "/aboutme" }
+  { name: "About Me (COTS)", href: "/aboutme" },
 ];
 </script>
 
