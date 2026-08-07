@@ -19,7 +19,7 @@ import socials from "@/assets/data/socials.js";
     >
       <div class="col-span-2 flex flex-col gap-4 pb-4 md:gap-20 md:pb-0">
         <div class="flex flex-col gap-2">
-          <a href="/"
+          <RouterLink to="/"
             ><img
               class="min-h-[46px] min-w-[161px]"
               src="@/assets/itsociety_wordmark_white.svg"
@@ -27,7 +27,7 @@ import socials from "@/assets/data/socials.js";
               width="161"
               height="46"
             />
-          </a>
+          </RouterLink>
           <p>Your gateway to unlocked potentials.</p>
         </div>
         <div>
@@ -52,8 +52,8 @@ import socials from "@/assets/data/socials.js";
       <div class="flex flex-col gap-2">
         <h3>IT Society</h3>
         <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li><RouterLink to="/about">About</RouterLink></li>
+          <li><RouterLink to="/blogs">Blog</RouterLink></li>
         </ul>
       </div>
       <div class="flex flex-col gap-2">
