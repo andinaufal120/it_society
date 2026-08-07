@@ -173,6 +173,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   document.removeEventListener("keydown", handleEscape);
+  document.body.style.overflow = "";
 });
 
 // Prevent body scroll when modal is open
