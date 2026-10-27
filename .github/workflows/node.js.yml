@@ -11,6 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
 
     strategy:
       matrix:
@@ -24,10 +27,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      # Resolves the Pages base path: "" on a custom domain, "/<repo>" on github.io
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
       - run: npm ci
       - run: npm run build
         env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
       # SPA fallback so deep links resolve to the app instead of GitHub's 404
       - run: cp dist/index.html dist/404.html
       - name: Upload artifact
